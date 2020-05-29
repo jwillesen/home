@@ -10,7 +10,9 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-import "./layout.css"
+// import "./layout.css"
+import "./bulma-with-overrides.sass"
+import "../../node_modules/@fortawesome/fontawesome-pro/css/all.min.css"
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -34,7 +36,7 @@ const Layout = ({ children }) => {
         }}
       >
         <main>{children}</main>
-        <footer>
+        <footer style={{ marginTop: "3rem" }}>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>

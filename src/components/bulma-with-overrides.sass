@@ -1,0 +1,32 @@
+@import "../../node_modules/bulma/sass/utilities/initial-variables.sass"
+
+// Why would these default to hidden and scroll? scroll produces a permanent scrollbar
+$body-overflow-x: auto
+$body-overflow-y: auto
+
+// Gotta fix contrast errors
+$red: #c90000
+$blue: #0075c4
+$green: #008000
+$purple: #8100d6
+
+$primary: $blue
+$info: $purple
+
+$focus-ring-color: #00aeff
+$focus-ring-border-color: $black
+
+$button-focus-box-shadow-color: $focus-ring-color
+$button-focus-box-shadow-size: 0 0 0 0.2em
+
+@import "../../node_modules/bulma/bulma.sass"
+
+// Override the focused border styles for is-primary and the like
+.button
+  @each $name, $pair in $colors
+    &.is-#{$name}
+      &:focus,
+      &.is-focused
+        &:not(:active)
+          border-color: $focus-ring-border-color
+          box-shadow: $button-focus-box-shadow-size $focus-ring-color
