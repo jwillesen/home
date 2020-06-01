@@ -10,9 +10,18 @@ import PropTypes from "prop-types"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header"
-// import "./layout.css"
-import "./bulma-with-overrides.sass"
+import styled from "@emotion/styled"
 import "../../node_modules/@fortawesome/fontawesome-pro/css/all.min.css"
+
+const Content = styled.div({
+  margin: "0 auto",
+  maxWidth: 960,
+  padding: `0 1.0875rem 1.45rem`,
+})
+
+const Footer = styled.footer({
+  marginTop: "3rem",
+})
 
 const Layout = ({ children }) => {
   const data = useStaticQuery(graphql`
@@ -28,20 +37,14 @@ const Layout = ({ children }) => {
   return (
     <>
       <Header siteTitle={data.site.siteMetadata.title} />
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `0 1.0875rem 1.45rem`,
-        }}
-      >
+      <Content>
         <main>{children}</main>
-        <footer style={{ marginTop: "3rem" }}>
+        <Footer>
           © {new Date().getFullYear()}, Built with
           {` `}
           <a href="https://www.gatsbyjs.org">Gatsby</a>
-        </footer>
-      </div>
+        </Footer>
+      </Content>
     </>
   )
 }

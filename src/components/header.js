@@ -1,37 +1,52 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
 import React from "react"
+import { string } from "prop-types"
+import styled from "@emotion/styled"
+import { Link } from "gatsby"
 
 Header.propTypes = {
-  siteTitle: PropTypes.string,
+  siteTitle: string,
 }
 
 Header.defaultProps = {
   siteTitle: ``,
 }
 
-export default function Header({ siteTitle }) {
-  const linkStyles = {
-    marginLeft: "1rem",
-  }
+const StyledHeader = styled.header({
+  background: "#0075c4",
+  color: "white",
+  marginBottom: "1.45rem",
+})
 
+const StyledHeaderDiv = styled.div({
+  margin: `0 auto`,
+  maxWidth: 960,
+  padding: `1.45rem 1.0875rem`,
+  display: "flex",
+  alignItems: "center",
+})
+
+const StyledLink = styled.a({
+  marginLeft: "1rem",
+  color: "white",
+  "&:visited": {
+    color: "white",
+  },
+})
+
+function HeaderIconLink({ href, srText, className }) {
   return (
-    <header
-      className="has-background-primary has-text-white"
-      style={{
-        marginBottom: `1.45rem`,
-      }}
-    >
-      <div
-        style={{
-          margin: `0 auto`,
-          maxWidth: 960,
-          padding: `1.45rem 1.0875rem`,
-          display: "flex",
-          alignItems: "center",
-        }}
-      >
-        <h1 className="title is-1" style={{ margin: 0, flex: 1 }}>
+    <StyledLink href={href}>
+      <i className={`${className}`} />
+      <span className="sr-only">{srText}</span>
+    </StyledLink>
+  )
+}
+
+export default function Header({ siteTitle }) {
+  return (
+    <StyledHeader>
+      <StyledHeaderDiv>
+        <h1 style={{ margin: 0, flex: 1 }}>
           <Link
             to="/"
             style={{
@@ -42,20 +57,27 @@ export default function Header({ siteTitle }) {
             {siteTitle}
           </Link>
         </h1>
-        <span class="icon" style={linkStyles}>
-          <a
-            className="has-text-white"
-            href="https://www.linkedin.com/in/jonwillesen/"
-          >
-            <i class="fab fa-linkedin fa-2x"></i>
-          </a>
-        </span>
-        <span class="icon" style={linkStyles}>
-          <a className="has-text-white" href="https://github.com/jwillesen/">
-            <i class="fab fa-github fa-2x"></i>
-          </a>
-        </span>
-      </div>
-    </header>
+        <HeaderIconLink
+          className="fab fa-github"
+          srText="Github"
+          href="https://github.com/jwillesen/"
+        />
+        <HeaderIconLink
+          className="fab fa-linkedin"
+          srText="Linked In"
+          href="https://www.linkedin.com/in/jonwillesen/"
+        />
+        <HeaderIconLink
+          className="far fa-envelope"
+          href="mailto:jon.willesen@gmail.com"
+          srText="Email"
+        />
+        <HeaderIconLink
+          className="far fa-phone"
+          href="tel:801-381-4176"
+          srText="Phone"
+        />
+      </StyledHeaderDiv>
+    </StyledHeader>
   )
 }
