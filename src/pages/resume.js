@@ -87,6 +87,12 @@ export default function Resume() {
       <ResumeSection>
         <SectionHeader>Experience</SectionHeader>
         <Experience
+          business="Pluralsight"
+          title="Senior Software Engineer"
+          dates="Jul 2020 - Present"
+          location="Salt Lake City, UT"
+        ></Experience>
+        <Experience
           business="Instructure"
           title="Senior Software Engineer"
           dates="Sep 2012 - May 2020"
