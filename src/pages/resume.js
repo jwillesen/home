@@ -30,9 +30,11 @@ const ExperienceDiv = styled.div({
   marginLeft: "1rem",
 })
 const ExperienceHeader = styled.h4({
+  fontSize: "1.25rem",
   margin: 0,
 })
 const ExperienceSubHeader = styled.div({
+  fontSize: "1.1rem",
   marginLeft: "1rem",
   display: "grid",
   gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
@@ -42,6 +44,13 @@ const JobDescription = styled.div({
   marginLeft: "1rem",
   marginTop: "1rem",
 })
+const JobSummary = styled.div({})
+const JobBullets = styled.ul({
+  marginTop: "0.5rem",
+})
+const Bullet = styled.li({})
+const SubBullets = styled.ul({})
+
 function Experience({ business, title, dates, location, children }) {
   return (
     <ExperienceDiv>
@@ -76,34 +85,110 @@ function ContactInformation() {
 }
 
 export default function Resume() {
-  // TODO: Objective/Summary Section
-  // TODO: Job Description at Instructure
-
   return (
     <Layout>
       <SEO title="resume" />
       <h2 className="sr-only">Resume</h2>
       <ContactInformation />
       <ResumeSection>
+        <SectionHeader>Objective</SectionHeader>
+        <div>
+          Become a company leader in the web development and JavaScript space.
+        </div>
         <SectionHeader>Experience</SectionHeader>
         <Experience
           business="Pluralsight"
           title="Senior Software Engineer"
           dates="Jul 2020 - Present"
           location="Salt Lake City, UT"
-        ></Experience>
+        >
+          <JobSummary>Lead front-end web developer for my team.</JobSummary>
+          <JobBullets>
+            <Bullet>
+              Hired to be the JavaScript and web development expert for the
+              team.
+            </Bullet>
+            <Bullet>
+              Architecting and writing the user interface for the Library
+              Explorer internal tool.
+            </Bullet>
+            <Bullet>
+              Improved and refactored the UI for the existing Tag Management
+              internal tool.
+            </Bullet>
+          </JobBullets>
+        </Experience>
         <Experience
           business="Instructure"
           title="Senior Software Engineer"
           dates="Sep 2012 - May 2020"
           location="Salt Lake City, UT"
-        ></Experience>
+        >
+          <JobSummary>
+            Senior Software Engineer taking on a variety of roles and
+            responsibilities.
+          </JobSummary>
+          <JobBullets>
+            <Bullet>
+              5 years of primarily front end web development using React and
+              related technologies.
+            </Bullet>
+            <SubBullets>
+              <Bullet>
+                Created reusable React components and hooks to speed up
+                development for my team and others.
+              </Bullet>
+              <Bullet>
+                Contributed to Instructure's UI framework (Instructure UI).
+              </Bullet>
+              <Bullet>
+                Worked closely with designers to ensure the UI implementation
+                matched their vision.
+              </Bullet>
+              <Bullet>
+                Ensured user interfaces were fully accessible, including WCAG
+                compliance.
+              </Bullet>
+            </SubBullets>
+            <Bullet>2 years of managerial team lead experience.</Bullet>
+            <SubBullets>
+              <Bullet>Lead multiple projects to successful completion.</Bullet>
+              <Bullet>
+                Worked closely with product management to ensure requirements
+                were met and understood.
+              </Bullet>
+              <Bullet>
+                Mentored junior and mid-level developers and helped them
+                progress in their career.
+              </Bullet>
+              <Bullet>Conducted yearly performance reviews.</Bullet>
+            </SubBullets>
+            <Bullet>
+              3 years of primarily back end development using Ruby on Rails,
+              PostgreSQL, and related technologies.
+            </Bullet>
+          </JobBullets>
+        </Experience>
         <Experience
           business="Evelyn Manufacturing"
           title="Senior Programmer"
           dates="Jan 2009 - Sep 2012"
           location="Salt Lake City, UT"
-        ></Experience>
+        >
+          <JobSummary>
+            C++ and JavaScript developer for both back end and front end.
+          </JobSummary>
+          <JobBullets>
+            <Bullet>
+              Started converting existing C++ user interfaces into web
+              interfaces.
+            </Bullet>
+            <Bullet>
+              Debugged several multi-threading and synchronization issues and
+              wrote tools to prevent such problems in the future.
+            </Bullet>
+          </JobBullets>
+        </Experience>
         <Experience
           business="Applied Signal Technology"
           title="Senior Software Developer"
@@ -131,7 +216,7 @@ export default function Resume() {
         <Experience
           business="Talk2 Technology"
           title="Programmer"
-          dates="2000 - 2002"
+          dates="Dec 2000 - Jun 2002"
           location="Salt Lake City, UT"
         />
       </ResumeSection>
@@ -162,6 +247,9 @@ export default function Resume() {
           <SkillsItem>PostgreSQL</SkillsItem>
           <SkillsItem>Webpack</SkillsItem>
           <SkillsItem>Jest</SkillsItem>
+          <SkillsItem>Redux</SkillsItem>
+          <SkillsItem>Recoil</SkillsItem>
+          <SkillsItem>Pullstate</SkillsItem>
         </SkillsGrid>
 
         <SkillsHeader>Other Keywords</SkillsHeader>
