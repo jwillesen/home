@@ -92,14 +92,29 @@ export default function Resume() {
       <ContactInformation />
       <ResumeSection>
         <SectionHeader>Objective</SectionHeader>
-        <div>
-          Become a company leader in the web development and JavaScript space.
-        </div>
+        <div>I want to build amazing browser-based software.</div>
         <SectionHeader>Experience</SectionHeader>
+        <Experience
+          business="Cvent"
+          title="Lead Front End Software Engineer"
+          dates="March 2021 - Present"
+          location="Salt Lake City, UT"
+        >
+          <JobSummary>
+            Lead front-end web developer for a team creating a React UI
+            Framework used by 90 teams across the company.
+          </JobSummary>
+          <JobBullets>
+            <Bullet>Creating architectural design documents.</Bullet>
+            <Bullet>
+              Working with Product Managers to organize and prioritize work.
+            </Bullet>
+          </JobBullets>
+        </Experience>
         <Experience
           business="Pluralsight"
           title="Senior Software Engineer"
-          dates="Jul 2020 - Present"
+          dates="July 2020 - March 2021"
           location="Salt Lake City, UT"
         >
           <JobSummary>Lead front-end web developer for my team.</JobSummary>
@@ -109,8 +124,8 @@ export default function Resume() {
               team.
             </Bullet>
             <Bullet>
-              Architecting and writing the user interface for the Library
-              Explorer internal tool.
+              Architected and wrote the user interface for the Library Explorer
+              internal tool.
             </Bullet>
             <Bullet>
               Improved and refactored the UI for the existing Tag Management
@@ -227,6 +242,7 @@ export default function Resume() {
         <SkillsHeader>Featured</SkillsHeader>
         <SkillsGrid>
           <FeaturedSkillsItem>JavaScript</FeaturedSkillsItem>
+          <FeaturedSkillsItem>TypeScript</FeaturedSkillsItem>
           <FeaturedSkillsItem>React</FeaturedSkillsItem>
           <FeaturedSkillsItem>Node</FeaturedSkillsItem>
           <FeaturedSkillsItem>SaaS</FeaturedSkillsItem>
