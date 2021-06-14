@@ -97,7 +97,7 @@ export default function Resume() {
         <Experience
           business="Cvent"
           title="Lead Front End Software Engineer"
-          dates="March 2021 - Present"
+          dates="March 2021 - May 2021"
           location="Salt Lake City, UT"
         >
           <JobSummary>
@@ -105,9 +105,9 @@ export default function Resume() {
             Framework used by 90 teams across the company.
           </JobSummary>
           <JobBullets>
-            <Bullet>Creating architectural design documents.</Bullet>
+            <Bullet>Created architectural design documents.</Bullet>
             <Bullet>
-              Working with Product Managers to organize and prioritize work.
+              Worked with Product Managers to organize and prioritize work.
             </Bullet>
           </JobBullets>
         </Experience>
