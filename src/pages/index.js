@@ -13,6 +13,9 @@ const IndexPage = () => (
         <Link to="/resume">Resume</Link>
       </li>
       <li>
+        <Link to="https://keep-score.games">Keep Score</Link>
+      </li>
+      <li>
         <Link to="https://memory.jonwillesen.dev">Memory Game</Link>
       </li>
     </ul>
