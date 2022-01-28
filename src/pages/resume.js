@@ -91,10 +91,40 @@ export default function Resume() {
       <h2 className="sr-only">Resume</h2>
       <ContactInformation />
       <ResumeSection>
-        <SectionHeader>Objective</SectionHeader>
-        <div>I want to build amazing browser-based software.</div>
         <SectionHeader>Experience</SectionHeader>
         <Experience
+          business="Guaranteed Rate Insurance"
+          title="Senior Software Engineer"
+          dates="July 2021 - Present"
+          location="Remote, Salt Lake City UT"
+        >
+          <JobSummary>
+            I was hired as the first engineer on a new team to create software
+            and tools to make company processes more efficient, drive business
+            growth, and acquire new customers.
+          </JobSummary>
+          <JobBullets>
+            <Bullet>
+              Determining the tools and practices we use to create software.
+            </Bullet>
+            <Bullet>Mentoring more junior engineers.</Bullet>
+            <Bullet>
+              Leading the creation of a new web application and component
+              library to gather new customer information and provide insurance
+              quotes.
+            </Bullet>
+            <Bullet>
+              Wrote the Quoter serverless app that integrates the company's CMS
+              with external Comparative Rater services.
+            </Bullet>
+            <Bullet>
+              Wrote the Loan Event Processor serverless app that consumes events
+              from the parent company's loan event system and posts data into
+              the CMS.
+            </Bullet>
+          </JobBullets>
+        </Experience>
+        {/* <Experience
           business="Cvent"
           title="Lead Front End Software Engineer"
           dates="March 2021 - May 2021"
@@ -110,7 +140,7 @@ export default function Resume() {
               Worked with Product Managers to organize and prioritize work.
             </Bullet>
           </JobBullets>
-        </Experience>
+        </Experience> */}
         <Experience
           business="Pluralsight"
           title="Senior Software Engineer"
@@ -245,7 +275,6 @@ export default function Resume() {
           <FeaturedSkillsItem>TypeScript</FeaturedSkillsItem>
           <FeaturedSkillsItem>React</FeaturedSkillsItem>
           <FeaturedSkillsItem>Node</FeaturedSkillsItem>
-          <FeaturedSkillsItem>SaaS</FeaturedSkillsItem>
         </SkillsGrid>
 
         <SkillsHeader>Languages and Frameworks</SkillsHeader>
@@ -266,10 +295,12 @@ export default function Resume() {
           <SkillsItem>Redux</SkillsItem>
           <SkillsItem>Recoil</SkillsItem>
           <SkillsItem>Pullstate</SkillsItem>
+          <SkillsItem>Tailwind CSS</SkillsItem>
         </SkillsGrid>
 
         <SkillsHeader>Other Keywords</SkillsHeader>
         <SkillsGrid>
+          <SkillsItem>SaaS</SkillsItem>
           <SkillsItem>Accessibility</SkillsItem>
           <SkillsItem>Aria</SkillsItem>
           <SkillsItem>Frontend</SkillsItem>
