@@ -10,9 +10,9 @@ export default function Layout({ children }: Props) {
     <div className="min-h-screen flex flex-col items-stretch">
       <Header />
       <div className="flex-1 my-2">
-        <main className="max-w-3xl mx-auto">{children}</main>
+        <main className="max-w-3xl mx-auto px-3">{children}</main>
       </div>
-      <footer className="bg-blue-600 text-white">
+      <footer className="bg-blue-600 text-white px-3">
         <div className="py-2 max-w-4xl mx-auto">© 2022 by Jon Willesen</div>
       </footer>
     </div>

@@ -20,6 +20,7 @@ export const skills: Skill[] = [
       'Git',
       'Docker',
       'PostgreSQL',
+      'Next.js',
       'Webpack',
       'Jest',
       'Redux',
@@ -27,6 +28,9 @@ export const skills: Skill[] = [
       'Pullstate',
       'Tailwind CSS',
       'Lambda',
+      'Rest',
+      'GraphQL',
+      'Apollo',
     ],
   },
   {

@@ -19,6 +19,21 @@ export const experiences: Experience[] = [
     title: 'Software Engineer 4',
     dates: 'July 2022 - Dec 2022',
     location: 'Remote, Salt Lake City, UT',
+    summary: (
+      <>
+        Senior member of a cross-functional team tasked with SEO and improving
+        the onboarding experience of new customers.
+      </>
+    ),
+    bullets: [
+      <>
+        Collaboratively lead a project to integrate with Contentful, an external
+        CMS, so marketing could easily create customized category landing pages
+        without engineering support.
+      </>,
+      <>Optimized rendering of course cards on category pages.</>,
+      <>Refactored duplicate code into a common library.</>,
+    ],
   },
   {
     business: 'Guaranteed Rate Insurance',
@@ -33,16 +48,15 @@ export const experiences: Experience[] = [
       </>
     ),
     bullets: [
-      <>Determined the tools and practices used to create software</>,
-      <>Mentored engineers with less experience</>,
+      <>Determined the tools and practices used to create software.</>,
+      <>Mentored engineers with less experience.</>,
       <>
         Lead the creation of a new web application and component library to
         gather new customer information and provide insurance quotes.
       </>,
       <>
         Wrote the Quoter serverless app that integrates the company's CMS with
-        external Comparative Rater
-        services./jsx-eslint/eslint-plugin-react//jsx-eslint/eslint-plugin-react/tree/master/docs/rules/no-unescaped-entities.mdtree/master/docs/rules/no-unescaped-entities.md
+        external Comparative Rater services.
       </>,
       <>
         Wrote the Loan Event Processor serverless app that consumes events from

@@ -3,7 +3,7 @@ import HeaderIconLink from './header-icon-link'
 
 export default function Header() {
   return (
-    <header className="bg-blue-600 text-white">
+    <header className="px-3 bg-blue-600 text-white">
       <div className="py-2 flex items-center gap-4 max-w-4xl mx-auto">
         <Link href="/" className="flex-1">
           <h1 className="text-4xl">Jon Willesen</h1>
@@ -27,6 +27,11 @@ export default function Header() {
           description="Phone"
           href="tel:801-381-4176"
           iconClass="fa-regular fa-phone"
+        />
+        <HeaderIconLink
+          description="Resume"
+          href="/jon-willesen-resume.pdf"
+          iconClass="fa-regular fa-file-pdf"
         />
       </div>
     </header>
