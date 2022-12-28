@@ -6,7 +6,7 @@ export default function ContactInformation() {
       <SectionHeader>Contact Information</SectionHeader>
       <ul className="list-disc list-inside">
         <li>
-          email:{' '}
+          Email:{' '}
           <a
             className="text-blue-700 underline"
             href="mailto:jon.willesen@gmail.com"
@@ -15,9 +15,18 @@ export default function ContactInformation() {
           </a>
         </li>
         <li>
-          phone:{' '}
+          Phone:{' '}
           <a className="text-blue-700 underline" href="tel:801-381-4176">
             801-381-4176
+          </a>
+        </li>
+        <li>
+          LinkedIn:{' '}
+          <a
+            className="text-blue-700 underline"
+            href="https://www.linkedin.com/in/jonwillesen"
+          >
+            https://www.linkedin.com/in/jonwillesen
           </a>
         </li>
       </ul>

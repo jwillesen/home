@@ -8,21 +8,25 @@ export interface Skill {
 export const skills: Skill[] = [
   {
     title: 'Featured',
-    keywords: ['JavaScript', 'TypeScript', 'React', 'Node'],
-  },
-  {
-    title: 'Languages and Frameworks',
-    keywords: ['Ruby', 'Ruby on Rails', 'SQL', 'C++'],
+    keywords: [
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'Node',
+      'Ruby',
+      'Ruby on Rails',
+    ],
   },
   {
     title: 'Technologies',
     keywords: [
+      'C++',
+      'SQL',
       'Git',
       'Docker',
       'PostgreSQL',
       'Next.js',
       'Webpack',
-      'Jest',
       'Redux',
       'Recoil',
       'Pullstate',
@@ -31,6 +35,12 @@ export const skills: Skill[] = [
       'Rest',
       'GraphQL',
       'Apollo',
+      'Kafka',
+      'RSpec',
+      'Jest',
+      'Mocha',
+      'Sinon',
+      'Cypress',
     ],
   },
   {
@@ -58,11 +68,11 @@ export const skills: Skill[] = [
 export default function Skills() {
   return (
     <>
-      <SectionHeader>Skills</SectionHeader>
+      <SectionHeader>Skills Summary</SectionHeader>
       {skills.map(({ title, keywords }) => (
         <div key={title}>
           <h4 className="font-semibold my-1">{title}</h4>
-          <div className="grid grid-cols-4 ml-5">
+          <div className="grid grid-cols-3 sm:grid-cols-4 ml-5">
             {keywords.map(keyword => (
               <div key={keyword}>{keyword}</div>
             ))}

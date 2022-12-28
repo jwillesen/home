@@ -1,5 +1,6 @@
 import { Experience } from './experience'
 import ExperienceItemBullets from './experience-item-bullets'
+import ExperienceSkills from './experience-skills'
 
 export interface Props {
   experience: Experience
@@ -15,6 +16,9 @@ export default function ExperienceItem({ experience }: Props) {
           <div>{experience.location}</div>
           <div>{experience.dates}</div>
         </div>
+        {experience.skills?.length && (
+          <ExperienceSkills skills={experience.skills} />
+        )}
         {experience.summary && (
           <div className="ml-5 mt-2">{experience.summary}</div>
         )}

@@ -1,5 +1,4 @@
 /* eslint-disable react/no-unescaped-entities */
-
 import type { ReactNode } from 'react'
 
 export type ExperienceBullet = ReactNode | ExperienceBullet[]
@@ -9,6 +8,7 @@ export interface Experience {
   title: string
   dates: string
   location: string
+  skills?: string[]
   summary?: ReactNode
   bullets?: ExperienceBullet[]
 }
@@ -19,6 +19,21 @@ export const experiences: Experience[] = [
     title: 'Software Engineer 4',
     dates: 'July 2022 - Dec 2022',
     location: 'Remote, Salt Lake City, UT',
+    skills: [
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'Node',
+      'Postgres',
+      'Next.js',
+      'GraphQL',
+      'Apollo',
+      'Jest',
+      'Mocha',
+      'Sinon',
+      'AWS',
+      'Git',
+    ],
     summary: (
       <>
         Senior member of a cross-functional team tasked with SEO and improving
@@ -40,6 +55,22 @@ export const experiences: Experience[] = [
     title: 'Senior Software Engineer',
     dates: 'July 2021 - July 2022',
     location: 'Remote, Salt Lake City, UT',
+    skills: [
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'Node',
+      'Postgres',
+      'Lambda',
+      'Kafka',
+      'Rest',
+      'Pullstate',
+      'Tailwind CSS',
+      'Webpack',
+      'Jest',
+      'AWS',
+      'Git',
+    ],
     summary: (
       <>
         Hired as the first engineer on a new team to create software and tools
@@ -69,6 +100,7 @@ export const experiences: Experience[] = [
   //   title: 'Lead Front End Software Engineer',
   //   dates: 'March 2021 - May 2021',
   //   location: 'Salt Lake City, UT',
+  //   skills: ['JavaScript', 'TypeScript', 'React'],
   //   summary: (
   //     <>
   //       Lead front-end web developer for a team creating a React UI Framework
@@ -85,6 +117,19 @@ export const experiences: Experience[] = [
     title: 'Senior Software Engineer',
     dates: 'July 2020 - March 2021',
     location: 'Salt Lake City, UT',
+    skills: [
+      'JavaScript',
+      'TypeScript',
+      'React',
+      'Node',
+      'Postgres',
+      'Kafka',
+      'Rest',
+      'Recoil',
+      'D3',
+      'Jest',
+      'Git',
+    ],
     summary: <>Lead front-end web developer for my team.</>,
     bullets: [
       <>Hired to be the JavaScript and web development expert for the team.</>,
@@ -103,6 +148,24 @@ export const experiences: Experience[] = [
     title: 'Senior Software Engineer',
     dates: 'Sep 2012 - May 2020',
     location: 'Salt Lake City, UT',
+    skills: [
+      'JavaScript',
+      'React',
+      'Ruby on Rails',
+      'Postgres',
+      'Rest',
+      'GraphQL',
+      'Apollo',
+      'Docker',
+      'Webpack',
+      'Redux',
+      'Pullstate',
+      'Jest',
+      'RSpec',
+      'Selenium',
+      'AWS',
+      'Git',
+    ],
     summary: (
       <>
         Senior Software Engineer taking on a variety of roles and
@@ -153,6 +216,7 @@ export const experiences: Experience[] = [
     title: 'Senior Programmer',
     dates: 'Jan 2009 - Sep 2012',
     location: 'Salt Lake City, UT',
+    skills: ['C++', 'JavaScript', 'Git', 'Subversion'],
     summary: <>C++ and JavaScript developer for both back end and front end.</>,
     bullets: [
       <>Started converting existing C++ user interfaces into web interfaces.</>,
@@ -167,29 +231,34 @@ export const experiences: Experience[] = [
     title: 'Senior Software Developer',
     dates: 'Aug 2007 - Jan 2009',
     location: 'Salt Lake City, UT',
+    skills: ['C++', 'Qt'],
   },
   {
     business: 'Direct Financial Solutions',
     title: 'Programmer III',
     dates: 'Mar 2004 - Aug 2007',
     location: 'Salt Lake City, UT',
+    skills: ['C++', 'MySQL'],
   },
   {
     business: 'Evelyn Manufacturing',
     title: 'Programmer',
     dates: 'Jul 2003 - Mar 2004',
     location: 'Salt Lake City, UT',
+    skills: ['C++'],
   },
   {
     business: 'Spontaneous Technology',
     title: 'Software Engineer',
     dates: 'Jun 2002 - Jul 2003',
     location: 'Salt Lake City, UT',
+    skills: ['C++', 'Java'],
   },
   {
     business: 'Talk2 Technology',
     title: 'Programmer',
     dates: 'Dec 2000 - Jun 2002',
     location: 'Salt Lake City, UT',
+    skills: ['C++'],
   },
 ]
