@@ -7,6 +7,7 @@ export interface Experience {
   business: string
   title: string
   dates: string
+  duration: string
   location: string
   skills?: string[]
   summary?: ReactNode
@@ -15,9 +16,32 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
+    business: 'Smarsh',
+    title: 'Senior Software Engineer',
+    dates: 'Jan 2023 - Present',
+    duration: 'current',
+    location: 'Remote, Salt Lake City, UT',
+    skills: ['JavaScript', 'React', 'Ruby on Rails', 'Jest'],
+    summary: (
+      <>
+        Senior member of a small team that maintains that enhances the Smarsh
+        VRM product
+      </>
+    ),
+    bullets: [
+      <>
+        Building custom auto-provisioning API for internal use to automate
+        onboarding new customers.
+      </>,
+      <>Built new reports and administrative interfaces</>,
+      <>Updated branding in VRM product to match Smarsh standards</>,
+    ],
+  },
+  {
     business: 'Outschool',
     title: 'Software Engineer 4',
     dates: 'July 2022 - Dec 2022',
+    duration: '7 mos',
     location: 'Remote, Salt Lake City, UT',
     skills: [
       'JavaScript',
@@ -54,6 +78,7 @@ export const experiences: Experience[] = [
     business: 'Guaranteed Rate Insurance',
     title: 'Senior Software Engineer',
     dates: 'July 2021 - July 2022',
+    duration: '1 yr, 1 mo',
     location: 'Remote, Salt Lake City, UT',
     skills: [
       'JavaScript',
@@ -99,6 +124,7 @@ export const experiences: Experience[] = [
   //   business: 'Cvent',
   //   title: 'Lead Front End Software Engineer',
   //   dates: 'March 2021 - May 2021',
+  //   duration: '3 mos',
   //   location: 'Salt Lake City, UT',
   //   skills: ['JavaScript', 'TypeScript', 'React'],
   //   summary: (
@@ -116,6 +142,7 @@ export const experiences: Experience[] = [
     business: 'Pluralsight',
     title: 'Senior Software Engineer',
     dates: 'July 2020 - March 2021',
+    duration: '9 mos',
     location: 'Salt Lake City, UT',
     skills: [
       'JavaScript',
@@ -147,6 +174,7 @@ export const experiences: Experience[] = [
     business: 'Instructure',
     title: 'Senior Software Engineer',
     dates: 'Sep 2012 - May 2020',
+    duration: '7 yrs, 8 mos',
     location: 'Salt Lake City, UT',
     skills: [
       'JavaScript',
@@ -215,6 +243,7 @@ export const experiences: Experience[] = [
     business: 'Evelyn Manufacturing',
     title: 'Senior Programmer',
     dates: 'Jan 2009 - Sep 2012',
+    duration: '3 yrs, 9 mos',
     location: 'Salt Lake City, UT',
     skills: ['C++', 'JavaScript', 'Git', 'Subversion'],
     summary: <>C++ and JavaScript developer for both back end and front end.</>,
@@ -230,6 +259,7 @@ export const experiences: Experience[] = [
     business: 'Applied Signal Technology',
     title: 'Senior Software Developer',
     dates: 'Aug 2007 - Jan 2009',
+    duration: '1 yr, 6 mos',
     location: 'Salt Lake City, UT',
     skills: ['C++', 'Qt'],
   },
@@ -237,6 +267,7 @@ export const experiences: Experience[] = [
     business: 'Direct Financial Solutions',
     title: 'Programmer III',
     dates: 'Mar 2004 - Aug 2007',
+    duration: '3 yrs, 6 mos',
     location: 'Salt Lake City, UT',
     skills: ['C++', 'MySQL'],
   },
@@ -244,6 +275,7 @@ export const experiences: Experience[] = [
     business: 'Evelyn Manufacturing',
     title: 'Programmer',
     dates: 'Jul 2003 - Mar 2004',
+    duration: '9 mos',
     location: 'Salt Lake City, UT',
     skills: ['C++'],
   },
@@ -251,6 +283,7 @@ export const experiences: Experience[] = [
     business: 'Spontaneous Technology',
     title: 'Software Engineer',
     dates: 'Jun 2002 - Jul 2003',
+    duration: '1 yr, 1 mo',
     location: 'Salt Lake City, UT',
     skills: ['C++', 'Java'],
   },
@@ -258,6 +291,7 @@ export const experiences: Experience[] = [
     business: 'Talk2 Technology',
     title: 'Programmer',
     dates: 'Dec 2000 - Jun 2002',
+    duration: '1 yr, 7 mos',
     location: 'Salt Lake City, UT',
     skills: ['C++'],
   },
