@@ -10,8 +10,8 @@ export default function ExperienceSummary({ experiences }: Props) {
   return (
     <>
       <SectionHeader>Experience</SectionHeader>
-      {experiences.map((experience, index) => (
-        <ExperienceItem key={index} experience={experience} />
+      {experiences.map((experience) => (
+        <ExperienceItem key={experience.dates} experience={experience} />
       ))}
     </>
   )

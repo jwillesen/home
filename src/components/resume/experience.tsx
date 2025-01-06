@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unescaped-entities */
 import type { ReactNode } from "react"
 
 export type ExperienceBullet = ReactNode | ExperienceBullet[]
@@ -16,25 +15,67 @@ export interface Experience {
 
 export const experiences: Experience[] = [
   {
-    business: "Smarsh",
+    business: "Proof",
     title: "Senior Software Engineer",
-    dates: "Jan 2023 - Present",
+    dates: "Aug 2023 - Present",
     duration: "current",
     location: "Remote, Salt Lake City, UT",
-    skills: ["JavaScript", "React", "Ruby on Rails", "Jest"],
+    skills: [
+      "TypeScript",
+      "React",
+      "Ruby on Rails",
+      "Jest",
+      "GraphQL",
+      "Postgres",
+    ],
     summary: (
       <>
-        Senior member of a small team that maintains that enhances the Smarsh
-        VRM product
+        Full stack developer on team that implements identity verification
+        features for Proof.
       </>
     ),
     bullets: [
       <>
-        Building custom auto-provisioning API for internal use to automate
+        Planned and implemented versioned biometric consent features to improve
+        legal compliance.
+      </>,
+      <>
+        Conceived and implemented internal admin interfaces to manage fraud risk
+        signals.
+      </>,
+      <>Updated shared components in the design system.</>,
+      <>
+        Implemented floating controls for viewing documents during notary
+        meetings.
+      </>,
+      <>
+        Created interface for retaking individual credentials during notary
+        meetings.
+      </>,
+      <>Launched initial release of new Defend feature.</>,
+      <>Integrated Google Maps display with IP location services.</>,
+    ],
+  },
+  {
+    business: "Smarsh",
+    title: "Senior Software Engineer",
+    dates: "Jan 2023 - Aug 2023",
+    duration: "8 mos",
+    location: "Remote, Salt Lake City, UT",
+    skills: ["JavaScript", "React", "Ruby on Rails", "Jest"],
+    summary: (
+      <>
+        Member of a small team that maintains that enhances the Smarsh VRM
+        product.
+      </>
+    ),
+    bullets: [
+      <>
+        Built custom auto-provisioning API for internal use to automate
         onboarding new customers.
       </>,
-      <>Built new reports and administrative interfaces</>,
-      <>Updated branding in VRM product to match Smarsh standards</>,
+      <>Built new reports and administrative interfaces.</>,
+      <>Updated branding in VRM product to match Smarsh standards.</>,
     ],
   },
   {
@@ -56,12 +97,11 @@ export const experiences: Experience[] = [
       "Mocha",
       "Sinon",
       "AWS",
-      "Git",
     ],
     summary: (
       <>
-        Senior member of a cross-functional team tasked with SEO and improving
-        the onboarding experience of new customers.
+        Member of a cross-functional team tasked with SEO and improving the
+        onboarding experience of new customers.
       </>
     ),
     bullets: [
@@ -81,7 +121,6 @@ export const experiences: Experience[] = [
     duration: "1 yr, 1 mo",
     location: "Remote, Salt Lake City, UT",
     skills: [
-      "JavaScript",
       "TypeScript",
       "React",
       "Node",
@@ -93,7 +132,6 @@ export const experiences: Experience[] = [
       "Webpack",
       "Jest",
       "AWS",
-      "Git",
     ],
     summary: (
       <>
@@ -154,7 +192,6 @@ export const experiences: Experience[] = [
       "Recoil",
       "D3",
       "Jest",
-      "Git",
     ],
     summary: <>Lead front-end web developer for my team.</>,
     bullets: [
@@ -190,7 +227,6 @@ export const experiences: Experience[] = [
       "RSpec",
       "Selenium",
       "AWS",
-      "Git",
     ],
     summary: (
       <>
@@ -253,6 +289,9 @@ export const experiences: Experience[] = [
       </>,
     ],
   },
+]
+
+export const priorExperiences: Experience[] = [
   {
     business: "Applied Signal Technology",
     title: "Senior Software Developer",
