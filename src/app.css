@@ -1,2 +1,16 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/forms';
+
+@import "@skeletonlabs/skeleton";
+@import "@skeletonlabs/skeleton/optional/presets";
+@import "@skeletonlabs/skeleton/themes/rocket";
+
+@source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
+
+@custom-variant dark (&:where([data-mode="dark"], [data-mode="dark"] *));
+
+@theme {
+  --breakpoint-xs: 30rem;
+
+  --spacing-4: calc(var(--spacing) * 4);
+}

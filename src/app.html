@@ -1,9 +1,20 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="rocket">
   <head>
     <meta charset="utf-8" />
     <link rel="icon" href="%sveltekit.assets%/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/7cbb34da46.js" crossorigin="anonymous"></script>
+    <script>
+      (() => {
+        const savedMode = localStorage.getItem("theme-mode")
+        const prefersDark = window.matchMedia(
+          "(prefers-color-scheme: dark)"
+        ).matches
+        const mode = savedMode || (prefersDark ? "dark" : "light")
+        document.documentElement.setAttribute("data-mode", mode)
+      })()
+  </script>
     %sveltekit.head%
   </head>
   <body data-sveltekit-preload-data="hover">

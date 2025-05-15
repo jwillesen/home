@@ -3,6 +3,7 @@ import adapter from "@sveltejs/adapter-netlify"
 import { vitePreprocess } from "@sveltejs/vite-plugin-svelte"
 
 const config = {
+  runes: true,
   preprocess: [vitePreprocess(), mdsvex()],
   kit: { adapter: adapter() },
   extensions: [".svelte", ".svx"],
