@@ -51,14 +51,21 @@
       Web Developer
     </h2>
     <nav>
-      <a data-flip-id="resume" class="anchor" href="/resume">
-        <i class="fa-regular fa-file-lines"></i> Résumé</a
+      <a
+        data-flip-id="assistant"
+        class={["anchor", { active: page.url.pathname === "/assistant" }]}
+        href="/assistant"><i class="fa-regular fa-robot"></i> Assistant</a
       >
-      <a data-flip-id="guiding-stars" class="anchor" href="/guiding-stars"
+      <a
+        data-flip-id="guiding-stars"
+        class={["anchor", { active: page.url.pathname === "/guiding-stars" }]}
+        href="/guiding-stars"
         ><i class="fa-regular fa-telescope"></i> Guiding Stars</a
       >
-      <a data-flip-id="assistant" class="anchor" href="/assistant"
-        ><i class="fa-regular fa-robot"></i> Assistant</a
+      <a
+        data-flip-id="resume"
+        class={["anchor", { active: page.url.pathname === "/resume" }]}
+        href="/resume"><i class="fa-regular fa-file-lines"></i> Résumé</a
       >
     </nav>
   </header>
@@ -97,7 +104,8 @@
   }
 
   nav i {
-    width: 1rem;
+    width: 1.25rem;
+    text-align: center;
   }
 
   .home nav {
