@@ -24,7 +24,7 @@
       Flip.from(flipState, {
         duration: 1,
         ease: "power2.inOut",
-        stagger: 0.05,
+        stagger: isHome ? -0.05 : 0.05,
         prune: true,
         absolute: true,
         onLeave: (elements) =>
@@ -51,7 +51,15 @@
       Web Developer
     </h2>
     <nav>
-      <a data-flip-id="resume" class="anchor" href="/resume">Resume</a>
+      <a data-flip-id="resume" class="anchor" href="/resume">
+        <i class="fa-regular fa-file-lines"></i> Résumé</a
+      >
+      <a data-flip-id="guiding-stars" class="anchor" href="/guiding-stars"
+        ><i class="fa-regular fa-telescope"></i> Guiding Stars</a
+      >
+      <a data-flip-id="assistant" class="anchor" href="/assistant"
+        ><i class="fa-regular fa-robot"></i> Assistant</a
+      >
     </nav>
   </header>
 
@@ -64,6 +72,7 @@
   header {
     margin: 1rem;
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     gap: 1rem;
     pointer-events: none;
@@ -78,5 +87,20 @@
     inset: 0;
     flex-direction: column;
     justify-content: center;
+  }
+
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 0.25rem;
+    column-gap: 1rem;
+  }
+
+  nav i {
+    width: 1rem;
+  }
+
+  .home nav {
+    flex-direction: column;
   }
 </style>
