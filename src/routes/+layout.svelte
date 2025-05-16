@@ -42,7 +42,7 @@
 </svelte:head>
 
 <div class="relative mx-auto min-h-screen max-w-5xl">
-  <div class="m-4 flex justify-end">
+  <div class="flex justify-end pt-4 pr-4">
     <LightSwitch />
   </div>
   <header class={[isHome && "home"]}>
