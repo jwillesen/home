@@ -1,9 +1,15 @@
 @import "tailwindcss";
 @plugin '@tailwindcss/forms';
 
+@import "@fontsource/inter/400";
+@import "@fontsource/ibm-plex-serif/600";
+@import "@fontsource/jetbrains-mono/400";
+
 @import "@skeletonlabs/skeleton";
 @import "@skeletonlabs/skeleton/optional/presets";
 @import "@skeletonlabs/skeleton/themes/rocket";
+
+@import "./workatory";
 
 @source '../node_modules/@skeletonlabs/skeleton-svelte/dist';
 

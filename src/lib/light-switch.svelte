@@ -27,6 +27,7 @@
     checked={mode === "light"}
     controlActive="bg-surface-200"
     onCheckedChange={handleClick}
+    label="Toggle light/dark mode"
   >
     {#snippet inactiveChild()}
       <i class="fa-regular fa-moon"></i>
