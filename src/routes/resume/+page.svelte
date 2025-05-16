@@ -14,17 +14,17 @@
       accessibility, and technical elegance.
     </p>
   </section>
-
+  <hr />
   <section>
     <h3 class="h3">Contact Information</h3>
     <ContactInformation />
   </section>
-
+  <hr />
   <section>
     <h3 class="h3">Technical Skills</h3>
     <Skills />
   </section>
-
+  <hr />
   <section>
     <h3 class="h3">Featured Projects</h3>
     <Projects />
