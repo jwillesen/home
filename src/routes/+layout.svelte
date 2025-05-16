@@ -1,5 +1,6 @@
 <script lang="ts">
   import { onMount } from "svelte"
+  import { prefersReducedMotion } from "svelte/motion"
   import gsap from "gsap"
   import { Flip } from "gsap/Flip"
   import { onNavigate } from "$app/navigation"
@@ -16,6 +17,8 @@
   })
 
   onNavigate((navigation) => {
+    if (prefersReducedMotion.current) return
+
     const flipState = Flip.getState("[data-flip-id]")
     return () => {
       if (navigation.from?.url.pathname === "/") {
