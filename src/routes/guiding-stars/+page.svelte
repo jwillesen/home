@@ -32,37 +32,37 @@
   }
 </script>
 
-<div class="flex flex-col gap-4">
-  <div class="flex justify-center">
-    <div class="telescope-frame">
-      <div class="telescope-glass">
-        <Starfield />
-        <Constellation
-          {stars}
-          {connections}
-          onStarClick={handleStarClick}
-          onStarAttention={handleStarAttention}
-        />
-      </div>
+<div class="flex flex-col items-center gap-4">
+  <div class="telescope-frame">
+    <div class="telescope-glass">
+      <Starfield />
+      <Constellation
+        {stars}
+        {connections}
+        onStarClick={handleStarClick}
+        onStarAttention={handleStarAttention}
+      />
     </div>
   </div>
-
   <div
-    class="h3 card preset-filled-secondary-500 text-surface-50 flex min-h-25 items-center justify-center p-2"
+    class="plaque h3 card preset-filled-secondary-500 text-surface-50 flex min-h-25 items-center justify-center p-2"
   >
     {activeStarLabel}
   </div>
 </div>
 
 <style>
+  .plaque {
+    width: 100%;
+    max-width: 40rem; /* same as .telescope-frame */
+  }
+
   .telescope-frame {
     flex: 1;
+    width: 100%;
     max-width: 40rem;
     aspect-ratio: 1;
 
-    display: flex;
-    align-items: center;
-    justify-content: center;
     border-radius: 50%;
     background: radial-gradient(circle at 50% 50%, #5e4a20 0%, #2f2410 100%);
     box-shadow:
@@ -73,9 +73,6 @@
   }
 
   .telescope-glass {
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 100%;
     height: 100%;
     border-radius: 50%;

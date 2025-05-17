@@ -1,15 +1,21 @@
 <script lang="ts">
+  import seedrandom from "seedrandom"
+
   const nStars = 200
   const minRadius = 0.1
   const maxRadius = 0.3
   const opacity = 0.8
   const colors = ["#ffffff", "#ffe9c4", "#d4fbff"]
+
+  const today = new Date().toISOString().slice(0, 10)
+  const rng = seedrandom(`starfield-${today}`)
+
   const stars = Array.from({ length: nStars }, (_v, index) => ({
     id: index,
-    x: Math.random() * 100,
-    y: Math.random() * 100,
-    radius: Math.random() * (maxRadius - minRadius) + minRadius,
-    color: colors[Math.floor(Math.random() * colors.length)],
+    x: rng() * 100,
+    y: rng() * 100,
+    radius: rng() * (maxRadius - minRadius) + minRadius,
+    color: colors[Math.floor(rng() * colors.length)],
   }))
 </script>
 
