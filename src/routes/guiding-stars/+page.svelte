@@ -45,7 +45,7 @@
     </div>
   </div>
   <div
-    class="plaque h3 card preset-filled-secondary-500 text-surface-50 flex min-h-25 items-center justify-center p-2"
+    class="plaque h3 card bg-secondary-500 border-secondary-900 border-radius-8 text-surface-50 flex min-h-25 items-center justify-center border-4 p-2"
   >
     {activeStarLabel}
   </div>
