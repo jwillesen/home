@@ -11,30 +11,46 @@
 
   const { children } = $props()
   const isHome = $derived(page.url.pathname === "/")
+  const fadeDuration = 0.25
 
   onMount(() => {
     gsap.registerPlugin(Flip)
   })
 
-  onNavigate((navigation) => {
+  onNavigate(async (navigation) => {
+    const from = navigation.from?.url.pathname
+    const to = navigation.to?.url.pathname
+    const home = "/"
     if (prefersReducedMotion.current) return
+    if (from === to) return
 
-    const flipState = Flip.getState("[data-flip-id]")
-    return () => {
-      if (navigation.from?.url.pathname === "/") {
-        gsap.set(".main", { autoAlpha: 0 })
+    // If we're navigating from anywhere but the home page, fade out main first
+    if (from !== home) {
+      await gsap.to("#main", { autoAlpha: 0, duration: fadeDuration })
+    }
+
+    // We're navigating from or to the home page, so do a flip
+    if (from === home || to === home) {
+      const flipState = Flip.getState("[data-flip-id]")
+
+      return async () => {
+        const tl = Flip.from(flipState, {
+          duration: 1,
+          ease: "power2.inOut",
+          stagger: isHome ? -0.05 : 0.05,
+          absolute: true,
+          onLeave: (elements) =>
+            gsap.fromTo(elements, { autoAlpha: 1 }, { autoAlpha: 0 }),
+          onEnter: (elements) =>
+            gsap.fromTo(elements, { autoAlpha: 0 }, { autoAlpha: 1, delay: 1 }),
+        })
+        if (to !== home) tl.to("#main", { autoAlpha: 1, duration: 0.5 })
       }
-      Flip.from(flipState, {
-        duration: 1,
-        ease: "power2.inOut",
-        stagger: isHome ? -0.05 : 0.05,
-        prune: true,
-        absolute: true,
-        onLeave: (elements) =>
-          gsap.fromTo(elements, { autoAlpha: 1 }, { autoAlpha: 0 }),
-        onEnter: (elements) =>
-          gsap.fromTo(elements, { autoAlpha: 0 }, { autoAlpha: 1, delay: 1 }),
-      }).to(".main", { autoAlpha: 1, duration: 0.5 })
+    } else {
+      // We're navigating between two non-home pages, so fade-out and fade-in
+      // Doing a cross-fade would require having both pages loaded temporarily
+      await gsap.to("#main", { autoAlpha: 0, duration: fadeDuration })
+      return () => gsap.to("#main", { autoAlpha: 1, duration: fadeDuration })
     }
   })
 </script>
@@ -73,7 +89,7 @@
     </nav>
   </header>
 
-  <main class="main m-4">
+  <main id="main" class="m-4" data-flip-id="main">
     {@render children()}
   </main>
 </div>
