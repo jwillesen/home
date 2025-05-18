@@ -9,18 +9,6 @@
     onStarClick: (star: GuidingStarDescriptor) => void
   }
   const { stars, connections, onStarAttention, onStarClick }: Props = $props()
-
-  const handleStarClick = (star: GuidingStarDescriptor) => {
-    onStarClick(star)
-  }
-
-  const handleEnter = (star: GuidingStarDescriptor) => {
-    onStarAttention(star)
-  }
-
-  const handleLeave = (star: GuidingStarDescriptor) => {
-    onStarAttention(null)
-  }
 </script>
 
 <div class="constellation">
@@ -45,12 +33,7 @@
 
   <div>
     {#each stars as star}
-      <GuidingStar
-        {star}
-        onclick={handleStarClick}
-        onmouseenter={handleEnter}
-        onmouseleave={handleLeave}
-      />
+      <GuidingStar {star} {onStarClick} {onStarAttention} />
     {/each}
   </div>
 </div>

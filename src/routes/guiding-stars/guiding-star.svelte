@@ -3,16 +3,17 @@
 
   type Props = {
     star: GuidingStarDescriptor
-    onclick: (star: GuidingStarDescriptor) => void
-    onmouseenter: (star: GuidingStarDescriptor) => void
-    onmouseleave: (star: GuidingStarDescriptor) => void
+    onStarClick: (star: GuidingStarDescriptor) => void
+    onStarAttention: (star: GuidingStarDescriptor | null) => void
   }
 
-  const { star, onclick, onmouseenter, onmouseleave }: Props = $props()
+  const { star, onStarClick, onStarAttention }: Props = $props()
 
-  const handleClick = () => onclick(star)
-  const handleEnter = () => onmouseenter(star)
-  const handleLeave = () => onmouseleave(star)
+  const handleClick = () => onStarClick(star)
+  const handleEnter = () => onStarAttention(star)
+  const handleLeave = () => onStarAttention(null)
+  const handleFocus = () => onStarAttention(star)
+  const handleBlur = () => onStarAttention(null)
 </script>
 
 <button
@@ -21,6 +22,8 @@
   onclick={handleClick}
   onmouseenter={handleEnter}
   onmouseleave={handleLeave}
+  onfocus={handleFocus}
+  onblur={handleBlur}
 >
   <!-- ✦ -->
   <!-- <i class="fa-solid fa-star"></i> -->
