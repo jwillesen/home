@@ -3,7 +3,8 @@
   import Starfield from "./starfield.svelte"
   import { type GuidingStarDescriptor } from "./types"
 
-  let activeStarLabel = $state("")
+  const instructions = "Hover, focus, and click on a star to learn more."
+  let activeStarLabel = $state(instructions)
 
   const stars: GuidingStarDescriptor[] = [
     { x: 20, y: 30, label: "Accessibility is not optional" },
@@ -24,7 +25,7 @@
   ]
 
   const handleStarAttention = (star: GuidingStarDescriptor | null) => {
-    activeStarLabel = star ? star.label : ""
+    activeStarLabel = star ? star.label : instructions
   }
 
   const handleStarClick = (star: GuidingStarDescriptor) => {
@@ -45,7 +46,7 @@
     </div>
   </div>
   <div
-    class="plaque h3 card bg-secondary-500 border-secondary-900 border-radius-8 text-surface-50 flex min-h-25 items-center justify-center border-4 p-2"
+    class="plaque h3 card bg-secondary-500 border-secondary-900 border-radius-8 text-surface-50 flex min-h-30 items-center justify-center border-4 p-2"
   >
     {activeStarLabel}
   </div>
