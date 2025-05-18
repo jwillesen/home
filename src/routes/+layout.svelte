@@ -61,35 +61,37 @@
 </svelte:head>
 
 <div class="relative mx-auto min-h-screen max-w-5xl">
-  <div class="flex justify-end pt-4 pr-4">
-    <LightSwitch />
+  <div class="flex">
+    <header class={[isHome && "home"]}>
+      <h1 data-flip-id="h1" class="h1"><a href="/">Jon Willesen</a></h1>
+      <h2 data-flip-id="subtitle" class={["h6", !isHome && "hidden"]}>
+        Web Developer
+      </h2>
+      <nav>
+        <a
+          data-flip-id="assistant"
+          class={["anchor", { active: page.url.pathname === "/assistant" }]}
+          href="/assistant"><i class="fa-regular fa-robot"></i> Assistant</a
+        >
+        <a
+          data-flip-id="guiding-stars"
+          class={["anchor", { active: page.url.pathname === "/guiding-stars" }]}
+          href="/guiding-stars"
+          ><i class="fa-regular fa-telescope"></i> Guiding Stars</a
+        >
+        <a
+          data-flip-id="resume"
+          class={["anchor", { active: page.url.pathname === "/resume" }]}
+          href="/resume"><i class="fa-regular fa-file-lines"></i> Résumé</a
+        >
+      </nav>
+    </header>
+    <div class="flex flex-1 justify-end pt-4 pr-4">
+      <LightSwitch />
+    </div>
   </div>
-  <header class={[isHome && "home"]}>
-    <h1 data-flip-id="h1" class="h1"><a href="/">Jon Willesen</a></h1>
-    <h2 data-flip-id="subtitle" class={["h6", !isHome && "hidden"]}>
-      Web Developer
-    </h2>
-    <nav>
-      <a
-        data-flip-id="assistant"
-        class={["anchor", { active: page.url.pathname === "/assistant" }]}
-        href="/assistant"><i class="fa-regular fa-robot"></i> Assistant</a
-      >
-      <a
-        data-flip-id="guiding-stars"
-        class={["anchor", { active: page.url.pathname === "/guiding-stars" }]}
-        href="/guiding-stars"
-        ><i class="fa-regular fa-telescope"></i> Guiding Stars</a
-      >
-      <a
-        data-flip-id="resume"
-        class={["anchor", { active: page.url.pathname === "/resume" }]}
-        href="/resume"><i class="fa-regular fa-file-lines"></i> Résumé</a
-      >
-    </nav>
-  </header>
 
-  <main id="main" class="m-4" data-flip-id="main">
+  <main id="main" class="m-4">
     {@render children()}
   </main>
 </div>
