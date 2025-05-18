@@ -35,6 +35,7 @@
   <!-- <i class="fa-solid fa-stars"></i> -->
   <!-- <i class="fa-regular fa-star-shooting"></i> -->
   <i class="fa-solid fa-star-shooting"></i>
+  <span class="sr-only">{star.label}</span>
 </button>
 
 <style>
