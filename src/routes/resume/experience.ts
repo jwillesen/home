@@ -37,7 +37,7 @@ export const experience: ExperienceItem[] = [
     bullets: [
       "Designed and implemented a custom auto-provisioning API to streamline internal onboarding, reducing time-to-setup for new customers.",
       "Built and enhanced administrative interfaces using React and Ruby on Rails, focusing on clarity, accessibility, and data usability.",
-      "Updated branding and UI components to align the VRM product with Smarsh’s design standards, contributing to a cohesive cross-product experience.",
+      "Updated branding and UI components to align the VRM product with Smarsh's design standards, contributing to a cohesive cross-product experience.",
     ],
   },
   {

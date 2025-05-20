@@ -43,11 +43,14 @@
 <h2 class="h2 sr-only">Resume</h2>
 
 <div class="flex flex-col gap-4">
-  <section>
+  <section class="flex flex-col gap-2">
     <em>Senior Front-End Developer | Accessibility Advocate | Indie Builder</em>
     <p>
-      Crafting thoughtful web experiences with a focus on clean UX,
-      accessibility, and technical elegance.
+      I'm a front-end engineer who loves turning ideas into thoughtful,
+      user-centered interfaces. With a background in educational tools, a
+      passion for accessibility, and a growing collection of indie projects, I
+      build software that's both practical and delightful—tools people can rely
+      on, and actually enjoy using.
     </p>
   </section>
 
@@ -59,6 +62,13 @@
       type="button"
       class="btn preset-outlined-primary-500"
       onclick={handleToggleAll}>{toggleAllLabel}</button
+    >
+  </div>
+
+  <div class="print-only">
+    Want to see more of my work? Visit <a
+      class="anchor"
+      href="https://jonwillesen.dev">https://jonwillesen.dev</a
     >
   </div>
 

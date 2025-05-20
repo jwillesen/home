@@ -91,7 +91,7 @@
     </div>
   </div>
 
-  <main id="main" class="m-4">
+  <main id="main" class="mx-4">
     {@render children()}
   </main>
 </div>

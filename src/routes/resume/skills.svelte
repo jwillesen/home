@@ -1,42 +1,39 @@
-<dl class="flex flex-col gap-4">
+<div class="flex flex-col gap-4">
   <div>
-    <dt>Languages</dt>
-    <dd>JavaScript, TypeScript, HTML, CSS, SQL, JSON</dd>
+    <h4 class="h4">Languages</h4>
+    <p>JavaScript, TypeScript, HTML, CSS, SQL, JSON</p>
   </div>
 
   <div>
-    <dt>Frameworks & Libraries</dt>
-    <dd>React, Svelte, SvelteKit, Node.js, Tailwind CSS, Apollo GraphQL</dd>
+    <h4 class="h4">Frameworks & Libraries</h4>
+    <p>React, Svelte, SvelteKit, Node.js, Tailwind CSS, Apollo GraphQL</p>
   </div>
 
   <div>
-    <dt>Tools & Platforms</dt>
-    <dd>Git, AWS Lambda, REST APIs, GraphQL, Vite, Webpack</dd>
+    <h4 class="h4">Tools & Platforms</h4>
+    <p>Git, AWS Lambda, REST APIs, GraphQL, Vite, Webpack</p>
   </div>
 
   <div>
-    <dt>Testing & Best Practices</dt>
-    <dd>
+    <h4 class="h4">Testing & Best Practices</h4>
+    <p>
       Jest, Vitest, Accessibility (ARIA, WCAG 2.1 AA Compliance), End-to-End
       (E2E) Testing (Cypress, Playwright), Agile/Scrum Methodologies
-    </dd>
+    </p>
   </div>
 
   <div>
-    <dt>Other Expertise</dt>
-    <dd>
+    <h4 class="h4">Other Expertise</h4>
+    <p>
       Component Design Systems, Progressive Web Apps (PWAs), SaaS Development,
       Front-End Architecture, Back-End Integration, Object-Oriented Programming
       (OOP), Automated Testing
-    </dd>
+    </p>
   </div>
-</dl>
+</div>
 
 <style>
-  dt {
-    font-weight: bold;
-  }
-  dd {
+  p {
     margin-left: var(--spacing-4);
   }
 </style>
