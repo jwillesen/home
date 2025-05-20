@@ -67,7 +67,7 @@
       <h2 data-flip-id="subtitle" class={["h6", !isHome && "hidden"]}>
         Web Developer
       </h2>
-      <nav>
+      <nav class="no-print">
         <a
           data-flip-id="assistant"
           class={["anchor", { active: page.url.pathname === "/assistant" }]}

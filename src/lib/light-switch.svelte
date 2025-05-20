@@ -18,7 +18,7 @@
 
 <span
   class={[
-    "transition-opacity delay-200", // delay to allow switch to move first
+    "no-print transition-opacity delay-200", // delay to allow switch to move first
     { "opacity-0": !mode, "opacity-100": mode },
   ]}
 >
