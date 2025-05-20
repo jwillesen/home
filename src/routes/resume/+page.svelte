@@ -5,10 +5,17 @@
   import Skills from "./skills.svelte"
   import Projects from "./projects.svelte"
   import WorkHistory from "./work-history.svelte"
+  import Education from "./education.svelte"
 
   let openAccordions: string[] = $state([])
   let toggleAllLabel = $state("Expand All")
-  const allAccordions = ["contact", "skills", "projects", "work-history"]
+  const allAccordions = [
+    "contact",
+    "skills",
+    "projects",
+    "work-history",
+    "education",
+  ]
   let workHistoryRef: WorkHistory
 
   const handleToggleAll = async () => {
@@ -20,6 +27,15 @@
       openAccordions = allAccordions
       await tick()
       workHistoryRef.expandAll()
+    }
+  }
+
+  const handleToggle = (e: { value: string[] }) => {
+    openAccordions = e.value
+    if (openAccordions.length === allAccordions.length) {
+      toggleAllLabel = "Collapse All"
+    } else {
+      toggleAllLabel = "Expand All"
     }
   }
 </script>
@@ -46,11 +62,7 @@
     >
   </div>
 
-  <Accordion
-    value={openAccordions}
-    multiple
-    onValueChange={(e) => (openAccordions = e.value)}
-  >
+  <Accordion value={openAccordions} multiple onValueChange={handleToggle}>
     {#snippet iconClosed()}
       <i class="no-print fa-regular fa-angle-left btn preset-filled-primary-500"
       ></i>
@@ -59,30 +71,36 @@
       <i class="no-print fa-regular fa-angle-down btn preset-filled-primary-500"
       ></i>
     {/snippet}
-    <Accordion.Item value="contact">
+    <Accordion.Item headingLevel={3} value="contact">
       {#snippet lead()}<i class="h3 fa-regular fa-address-card"></i>{/snippet}
-      {#snippet control()}<h3 class="h3">Contact Information</h3>{/snippet}
+      {#snippet control()}<div class="h3">Contact Information</div>{/snippet}
       {#snippet panel()}<ContactInformation />{/snippet}
     </Accordion.Item>
 
-    <Accordion.Item value="skills">
+    <Accordion.Item headingLevel={3} value="skills">
       {#snippet lead()}
         <i class="h3 fa-regular fa-screwdriver-wrench"></i>
       {/snippet}
-      {#snippet control()}<h3 class="h3">Technical Skills</h3>{/snippet}
+      {#snippet control()}<div class="h3">Technical Skills</div>{/snippet}
       {#snippet panel()}<Skills />{/snippet}
     </Accordion.Item>
 
-    <Accordion.Item value="projects">
+    <Accordion.Item headingLevel={3} value="projects">
       {#snippet lead()}<i class="h3 fa-regular fa-shelves"></i>{/snippet}
-      {#snippet control()}<h3 class="h3">Featured Projects</h3>{/snippet}
+      {#snippet control()}<div class="h3">Featured Projects</div>{/snippet}
       {#snippet panel()}<Projects />{/snippet}
     </Accordion.Item>
 
-    <Accordion.Item value="work-history">
+    <Accordion.Item headingLevel={3} value="work-history">
       {#snippet lead()}<i class="h3 fa-regular fa-map"></i>{/snippet}
-      {#snippet control()}<h3 class="h3">Work History</h3>{/snippet}
+      {#snippet control()}<div class="h3">Work History</div>{/snippet}
       {#snippet panel()}<WorkHistory bind:this={workHistoryRef} />{/snippet}
+    </Accordion.Item>
+
+    <Accordion.Item headingLevel={3} value="education">
+      {#snippet lead()}<i class="h3 fa-regular fa-diploma"></i>{/snippet}
+      {#snippet control()}<div class="h3">Education</div>{/snippet}
+      {#snippet panel()}<Education />{/snippet}
     </Accordion.Item>
   </Accordion>
 </div>

@@ -31,11 +31,11 @@
   {/snippet}
 
   {#each experience as job (job.company)}
-    <Accordion.Item value={job.company}>
+    <Accordion.Item headingLevel={4} value={job.company}>
       {#snippet control()}
-        <h4 class="h4">
+        <div class="h4">
           {job.company} – {job.title}
-        </h4>
+        </div>
         <span>{job.dateStart} – {job.dateEnd} · {job.location}</span>
       {/snippet}
       {#snippet panel()}
