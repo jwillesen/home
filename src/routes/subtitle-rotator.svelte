@@ -17,6 +17,9 @@
   let currentSubtitleIndex = $state(0)
   let subtitle: HTMLSpanElement
 
+  type Props = { active: boolean }
+  const { active }: Props = $props()
+
   async function subtitleTransition() {
     // Use opacity only instead of autoAlpha so screen readers will read the aria-live text
     if (!prefersReducedMotion.current) {
@@ -29,12 +32,14 @@
     }
   }
 
-  onMount(() => {
-    const interval = setInterval(() => {
-      subtitleTransition()
-    }, 5000)
+  $effect(() => {
+    if (active) {
+      const interval = setInterval(() => {
+        subtitleTransition()
+      }, 5000)
 
-    return () => clearInterval(interval)
+      return () => clearInterval(interval)
+    }
   })
 </script>
 
