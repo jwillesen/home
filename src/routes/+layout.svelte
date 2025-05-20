@@ -16,6 +16,9 @@
 
   onMount(() => {
     gsap.registerPlugin(Flip)
+    if (isHome) {
+      gsap.set("#main", { autoAlpha: 0 })
+    }
   })
 
   onNavigate(async (navigation) => {
