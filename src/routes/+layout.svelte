@@ -6,6 +6,7 @@
   import { onNavigate } from "$app/navigation"
   import { page } from "$app/state"
   import LightSwitch from "$lib/light-switch.svelte"
+  import SubtitleRotator from "./subtitle-rotator.svelte"
 
   import "../app.css"
 
@@ -65,7 +66,7 @@
     <header class={[isHome && "home"]}>
       <h1 data-flip-id="h1" class="h1"><a href="/">Jon Willesen</a></h1>
       <h2 data-flip-id="subtitle" class={["h6", !isHome && "hidden"]}>
-        Web Developer
+        <SubtitleRotator />
       </h2>
       <nav class="no-print">
         <a
