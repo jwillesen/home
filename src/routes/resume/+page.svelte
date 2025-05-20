@@ -44,13 +44,12 @@
 
 <div class="flex flex-col gap-4">
   <section class="flex flex-col gap-2">
-    <em>Senior Front-End Developer | Accessibility Advocate | Indie Builder</em>
+    <em>Senior Front-End Developer · Accessibility Advocate · Indie Builder</em>
     <p>
-      I'm a front-end engineer who loves turning ideas into thoughtful,
-      user-centered interfaces. With a background in educational tools, a
-      passion for accessibility, and a growing collection of indie projects, I
-      build software that's both practical and delightful—tools people can rely
-      on, and actually enjoy using.
+      I'm a front-end engineer who brings ideas to life through thoughtful,
+      user-centered design. With a background in educational tools, a passion
+      for accessibility, and a growing suite of indie projects, I build software
+      that's practical, delightful, and built to last.
     </p>
   </section>
 
@@ -66,9 +65,9 @@
   </div>
 
   <div class="print-only">
-    Want to see more of my work? Visit <a
+    Want to learn more about me? Visit <a
       class="anchor"
-      href="https://jonwillesen.dev">https://jonwillesen.dev</a
+      href="https://jonwillesen.dev">jonwillesen.dev</a
     >
   </div>
 

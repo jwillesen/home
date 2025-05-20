@@ -25,9 +25,9 @@
   <div>
     <h4 class="h4">Other Expertise</h4>
     <p>
-      Component Design Systems, Progressive Web Apps (PWAs), SaaS Development,
-      Front-End Architecture, Back-End Integration, Object-Oriented Programming
-      (OOP), Automated Testing
+      Component Libraries, Progressive Web App (PWA) Development, SaaS
+      Platforms, Front-End Architecture, Back-End Integration, Object-Oriented
+      Programming (OOP), Automated Testing
     </p>
   </div>
 </div>

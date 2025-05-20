@@ -18,12 +18,11 @@ export const experience: ExperienceItem[] = [
     description:
       "Full stack developer focused on high-quality user experience for identity verification workflows.",
     bullets: [
-      "Designed and implemented a draggable credential viewer for notary meetings, allowing side-by-side document comparison. Solved complex event handling issues with PDF overlays and ensured consistent behavior across platforms.",
-      "Built interface safeguards to keep floating elements accessible within UI bounds, improving usability on varied screen sizes.",
-      "Developed admin tools for tracking fraud-risk signals, including a dynamic map view that plotted IP addresses across multiple transaction points to aid in anomaly detection.",
-      "Contributed updates to shared component library and design system.",
-      "Integrated Google Maps API with IP geolocation services for administrative review tools.",
-      "Launched the first release of the Defend feature, supporting secure user verification workflows.",
+      "Designed and built a draggable credential viewer for notary meetings, enabling side-by-side PDF comparison. Resolved complex event handling with overlay layers and ensured consistent cross-platform behavior.",
+      "Implemented UI safeguards to keep draggable elements within viewable bounds, enhancing usability across varied screen sizes and layouts.",
+      "Developed admin tools to track fraud-risk signals, including a dynamic map that visualized IP addresses across multiple transaction points to support anomaly detection.",
+      "Contributed improvements to the shared component library and design system, supporting consistency and reuse across the product.",
+      "Contributed to the first release of Defend, the company’s initial fraud prevention feature. Integrated external risk signals and built UI components to surface verification data within secure workflows.",
     ],
   },
   {
@@ -35,9 +34,9 @@ export const experience: ExperienceItem[] = [
     description:
       "Contributed to the VRM product team, improving internal tooling and user-facing admin experiences.",
     bullets: [
-      "Designed and implemented a custom auto-provisioning API to streamline internal onboarding, reducing time-to-setup for new customers.",
-      "Built and enhanced administrative interfaces using React and Ruby on Rails, focusing on clarity, accessibility, and data usability.",
-      "Updated branding and UI components to align the VRM product with Smarsh's design standards, contributing to a cohesive cross-product experience.",
+      "Built a custom auto-provisioning API to streamline internal onboarding, reducing setup time for new customers.",
+      "Developed and enhanced admin interfaces in React and Rails, prioritizing clarity, accessibility, and data usability.",
+      "Updated branding and UI components to align the VRM product with Smarsh’s design system, contributing to a cohesive cross-product experience.",
     ],
   },
   {
@@ -49,9 +48,9 @@ export const experience: ExperienceItem[] = [
     description:
       "Worked on a cross-functional team focused on SEO and new user onboarding within an education-focused platform.",
     bullets: [
-      "Co-led a project to integrate with Contentful, enabling the marketing team to publish customized category landing pages without engineering support.",
-      "Refactored and consolidated frontend code across course listings to reduce duplication and improve maintainability.",
-      "Optimized category page performance and rendering behavior to support SEO and increase discoverability of online courses.",
+      "Contributed to a Contentful integration project that enabled the marketing team to publish custom category landing pages without engineering support.",
+      "Streamlined course listing code by refactoring and consolidating components, reducing duplication and boosting maintainability.",
+      "Optimized category page performance and rendering to support SEO and improve discoverability of online courses.",
     ],
   },
   {
@@ -63,10 +62,10 @@ export const experience: ExperienceItem[] = [
     description:
       "First engineer hired to establish new systems and tools for growing the company’s digital insurance products.",
     bullets: [
-      "Led development of a new React and Tailwind-based web application to onboard customers and provide instant insurance quotes.",
-      "Collaborated with stakeholders to define technical architecture and establish best practices for front-end development on a newly formed team.",
-      "Mentored junior developers and helped shape the team’s engineering culture as it grew.",
-      "Developed customer-facing interfaces that integrated with external quoting systems, ensuring seamless data flow and responsive UI.",
+      "Led development of a React and Tailwind-based web app for onboarding customers and delivering instant insurance quotes.",
+      "Worked with stakeholders to define technical architecture and establish front-end best practices for a newly formed team.",
+      "Mentored junior developers and helped establish a strong engineering culture as the team scaled.",
+      "Developed customer-facing interfaces integrated with external quoting systems, ensuring seamless data flow and a responsive UI.",
     ],
   },
   {
@@ -76,12 +75,11 @@ export const experience: ExperienceItem[] = [
     dateEnd: "March 2021",
     location: "Remote (Salt Lake City, UT)",
     description:
-      "Brought on as the team’s front-end specialist to lead development of internal tools for managing and visualizing educational content.",
+      "Brought on as the team's front-end specialist to lead development of internal tools for managing and visualizing educational content.",
     bullets: [
-      "Architected and implemented the UI for the Library Explorer tool, enabling teams to browse and interact with complex educational content hierarchies.",
-      "Improved the Tag Management interface by refining UX patterns and reorganizing content for clarity and efficiency.",
-      "Collaborated closely with backend engineers and product stakeholders to shape internal workflows into intuitive, performant interfaces.",
-      "Acted as a front-end mentor on the team, providing guidance on JavaScript, React, and web accessibility best practices.",
+      "Architected and built the Library Explorer UI, enabling teams to navigate and interact with complex educational content hierarchies.",
+      "Improved the Tag Management interface by refining UX patterns and reorganizing content to enhance clarity and efficiency.",
+      "Mentored teammates on JavaScript, React, and accessibility best practices, serving as the team’s front-end specialist.",
     ],
   },
   {
@@ -93,12 +91,11 @@ export const experience: ExperienceItem[] = [
     description:
       "Contributed to Canvas LMS as a front-end specialist, team lead, and accessibility advocate.",
     bullets: [
-      "Led development of a two-way infinite scroll interface for the student planner, supporting seamless past/future navigation while preserving scroll position and maintaining accessibility for screen reader users.",
-      "Passed multiple accessibility audits; personally addressed issues by adding screen-reader-friendly interactions, skip links, and alternative views (e.g., list-mode calendar for visually impaired users).",
-      "Created a fully accessible, internationalized date picker that supported screen readers and natural keyboard navigation.",
-      "Collaborated closely with designers and QA to implement accessible, WCAG-compliant UI components.",
-      "Built and maintained reusable React components and hooks as part of Instructure’s UI library, used by teams across the company.",
-      "Mentored junior and mid-level engineers, conducted performance reviews, and led multiple cross-functional project teams.",
+      "Led development of a two-way infinite scroll for the student planner, enabling seamless past/future navigation while preserving scroll position and ensuring screen reader and keyboard accessibility.",
+      "Passed multiple accessibility audits by directly addressing issues—adding screen reader-friendly interactions, skip links, and alternative views (e.g., a list-mode calendar for visually impaired users).",
+      "Worked with designers and QA to implement accessible, WCAG-compliant UI components, including a fully internationalized date picker with screen reader support and intuitive keyboard navigation.",
+      "Built and maintained reusable React components and hooks for Instructure’s shared UI library, supporting accessibility and consistency across product teams.",
+      "Mentored junior and mid-level engineers, conducted performance reviews, and led cross-functional project teams to deliver key initiatives.",
     ],
   },
 ]

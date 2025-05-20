@@ -5,9 +5,8 @@
     </h4>
     <em>Send messages to your future self.</em>
     <p>
-      Designed to foster mindfulness and connection through scheduled push
-      notifications via an installable PWA. Built with SvelteKit, Convex,
-      Tailwind CSS, and Skeleton UI.
+      A mindfulness and connection tool built as an installable PWA with
+      SvelteKit, Convex, Tailwind, and Skeleton UI.
     </p>
   </div>
 
@@ -17,12 +16,10 @@
         >LostWords.Quest</a
       >
     </h4>
-    <em>A vocabulary tool to find the word that's on the tip of your tongue.</em
-    >
+    <em>A vocabulary tool for rediscovering lost words.</em>
     <p>
-      A web app that uses OpenAI's API to help users discover the words they're
-      looking for. Built with SvelteKit and OpenAI's language models (LLM) via
-      API integrations.
+      Uses OpenAI's API to help users find elusive words. Built with SvelteKit
+      and integrated LLM APIs.
     </p>
   </div>
 
@@ -32,15 +29,10 @@
         >TandemBook.Club</a
       >
     </h4>
-    <em
-      >A space for small groups to discuss books, podcasts, or their favorite
-      shows.</em
-    >
+    <em>Discussion spaces for books, podcasts, and shows.</em>
     <p>
-      A synchronized discussion forum for small groups to post and share about
-      their favorite episodic media while they read, listen, or watch at their
-      own pace while preventing spoilers. Built with React, Convex, and the Web
-      Awesome component library.
+      A spoiler-free group discussion app for episodic media. Built with React,
+      Convex, and Web Awesome UI components.
     </p>
   </div>
 
@@ -49,13 +41,11 @@
       <a class="anchor" target="_blank" href="https://cozy.cards">Cozy.Cards</a>
       (in progress)
     </h4>
-    <em
-      >A personalized Tarot reading and journaling app featuring character
-      driven AI readers.</em
+    <em>A Tarot reading and journaling app with character-driven AI readers.</em
     >
     <p>
-      Focuses on creative self-reflection and playful exploration of symbolism.
-      Built with SvelteKit, Convex, OpenAI, Tailwind CSS, and Skeleton UI.
+      Blends symbolic introspection with interactive storytelling. Built with
+      SvelteKit, Convex, OpenAI, Tailwind, and Skeleton UI.
     </p>
   </div>
 </div>
