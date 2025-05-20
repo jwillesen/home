@@ -29,6 +29,7 @@
     onCheckedChange={handleClick}
     label="Toggle light/dark mode"
   >
+    <span class="sr-only">Toggle light/dark mode</span>
     {#snippet inactiveChild()}
       <i class="fa-regular fa-moon"></i>
     {/snippet}
