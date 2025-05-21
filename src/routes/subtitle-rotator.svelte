@@ -13,6 +13,7 @@
     "Frontend Specialist",
     "PWA Enthusiast",
     "Rubber Duck Debugger",
+    "What are you still doing here? Click a link below!",
   ]
   let currentSubtitleIndex = $state(0)
   let subtitle: HTMLSpanElement
