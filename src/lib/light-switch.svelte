@@ -27,7 +27,8 @@
     checked={mode === "light"}
     controlActive="bg-surface-200"
     onCheckedChange={handleClick}
-    label="Toggle light/dark mode"
+    stateFocused="ring ring-offset-2 ring-blue-500"
+    classes="!gap-0"
   >
     <span class="sr-only">Toggle light/dark mode</span>
     {#snippet inactiveChild()}
