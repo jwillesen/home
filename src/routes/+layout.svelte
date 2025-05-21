@@ -5,6 +5,7 @@
   import { Flip } from "gsap/Flip"
   import { onNavigate } from "$app/navigation"
   import { page } from "$app/state"
+  import { Toaster } from "svelte-french-toast"
   import LightSwitch from "$lib/light-switch.svelte"
   import SubtitleRotator from "./subtitle-rotator.svelte"
 
@@ -63,6 +64,8 @@
   <title>Jon Willesen</title>
   <meta name="description" content="Jon Willesen's professional website" />
 </svelte:head>
+
+<Toaster />
 
 <div class="relative mx-auto min-h-screen max-w-5xl">
   <div class="flex">

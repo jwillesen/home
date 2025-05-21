@@ -1,16 +1,18 @@
 <script lang="ts">
+  import { toast } from "svelte-french-toast"
   import Constellation from "./constellation.svelte"
   import Starfield from "./starfield.svelte"
   import { type GuidingStarDescriptor } from "./types"
 
-  const instructions = "Hover, focus, and click on a star to learn more."
+  const instructions =
+    "This constellation is still taking shape. Hover or click a star to preview what's coming soon."
   let activeStarLabel = $state(instructions)
 
   const stars: GuidingStarDescriptor[] = [
-    { x: 20, y: 30, label: "Accessibility is not optional" },
-    { x: 55, y: 50, label: "Craft matters" },
-    { x: 75, y: 25, label: "Kind UX is smart UX" },
-    { x: 40, y: 70, label: "Build softly, carry sharp tools" },
+    { x: 20, y: 30, label: "Accessibility is Not Optional" },
+    { x: 55, y: 50, label: "Craft Matters" },
+    { x: 75, y: 25, label: "Design Beyond the Happy Path" },
+    { x: 40, y: 70, label: "Where the Type System Ends" },
   ]
 
   const connections: [number, number][] = [
@@ -29,11 +31,13 @@
   }
 
   const handleStarClick = (star: GuidingStarDescriptor) => {
-    console.log("Star clicked:", star)
+    toast(
+      `${star.label}: This star's page hasn't been written yet, but it's on the horizon.`,
+    )
   }
 </script>
 
-<div class="flex flex-col items-center gap-4">
+<div class="telescope flex flex-col items-center gap-4">
   <div class="telescope-frame">
     <div class="telescope-glass">
       <Starfield />
@@ -46,22 +50,27 @@
     </div>
   </div>
   <div
-    class="plaque h3 card bg-secondary-500 border-secondary-900 border-radius-8 text-surface-50 flex min-h-30 items-center justify-center border-4 p-2"
+    aria-live="polite"
+    class="plaque h4 card bg-secondary-500 border-secondary-900 border-radius-8 text-surface-50 flex min-h-30 items-center justify-center border-4 p-4"
   >
     {activeStarLabel}
   </div>
 </div>
 
 <style>
+  .telescope {
+    --max-telescope-width: 40rem;
+  }
+
   .plaque {
     width: 100%;
-    max-width: 40rem; /* same as .telescope-frame */
+    max-width: var(--max-telescope-width);
   }
 
   .telescope-frame {
     flex: 1;
     width: 100%;
-    max-width: 40rem;
+    max-width: var(--max-telescope-width);
     aspect-ratio: 1;
 
     border-radius: 50%;
