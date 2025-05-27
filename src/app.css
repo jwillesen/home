@@ -2,8 +2,11 @@
 @plugin '@tailwindcss/forms';
 
 @import "@fontsource/inter/400";
-@import "@fontsource/ibm-plex-serif/600";
+@import "@fontsource/inter/700";
+@import "@fontsource/ibm-plex-serif/400";
+@import "@fontsource/ibm-plex-serif/700";
 @import "@fontsource/jetbrains-mono/400";
+@import "@fontsource/jetbrains-mono/700";
 
 @import "@skeletonlabs/skeleton";
 @import "@skeletonlabs/skeleton/optional/presets";
