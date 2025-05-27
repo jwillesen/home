@@ -51,7 +51,7 @@
   }
 </script>
 
-<div class="flex flex-col gap-4">
+<div class="flex flex-col gap-4" aria-live="polite" aria-atomic="false">
   {#each conversation as turn}
     <div
       class={["flex", turn.role === "user" ? "justify-end" : "justify-start"]}
@@ -81,13 +81,12 @@
           class="input"
           placeholder="Type your question here..."
           maxlength={maxLength}
-          disabled={conversation[conversation.length - 1]?.loading}
         />
         <button
           type="submit"
           class="ig-btn preset-filled-primary-500"
-          disabled={question.length === 0 || question.length > maxLength}
-          >Submit</button
+          disabled={question.length === 0 ||
+            conversation[conversation.length - 1]?.loading}>Submit</button
         >
       </div>
     </label>

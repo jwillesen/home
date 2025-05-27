@@ -1,20 +1,33 @@
 <script lang="ts">
-  import { marked, type Renderer, type Token } from "marked"
+  import { Marked, type Renderer, type Token } from "marked"
 
   const renderer: Partial<Renderer> = {
-    strong: ({ text }) => `<strong class="font-bold">${text}</strong>`,
-    em: ({ text }) => `<em class="italic">${text}</em>`,
-    list: ({ ordered, items }) => {
+    strong(this: Renderer, { text }) {
+      return `<strong class="font-bold">${text}</strong>`
+    },
+    em(this: Renderer, { text }) {
+      return `<em class="italic">${text}</em>`
+    },
+    list(this: Renderer, { ordered, items }) {
       const tag = ordered ? "ol" : "ul"
-      return `<${tag} class="list-inside list-disc pl-5 space-y-1">
-        ${items.map((item) => `<li>${item.text}</li>`).join("")}
+      const body = items.map((item) => this.listitem(item)).join("")
+      return `<${tag} class="list-disc pl-5 space-y-1">
+        ${body}
       </${tag}>`
     },
-    heading: ({ tokens, depth }) => {
+    heading(this: Renderer, { tokens, depth }) {
       const level = Math.min(depth + 1, 6)
-      return `<h${level} class="h${level}">${tokens.map((t) => t.raw).join("")}</h${level}>`
+      return `<h${level} class="h${level}">${this.parser.parseInline(tokens)}</h${level}>`
     },
   }
+
+  const marked = new Marked(
+    {
+      gfm: true,
+      breaks: true,
+    },
+    { renderer },
+  )
 
   type Props = {
     content: string

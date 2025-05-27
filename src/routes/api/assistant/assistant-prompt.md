@@ -364,3 +364,9 @@ In active development. Current progress includes prototype animations and atmosp
 - Built a two-way infinite scroll for the student planner with accessibility support
 - Created accessible calendar alternatives, date pickers, and WCAG-compliant UI components
 - Maintained shared React component libraries and mentored engineers
+
+---
+
+### 🎓 Education
+
+Jon holds a Bachelor of Science degree in Computer Science from the University of Utah. His academic background provided a strong foundation in data structures, algorithms, and software engineering principles, which he has built upon through extensive real-world experience.
