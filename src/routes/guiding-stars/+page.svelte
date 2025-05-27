@@ -84,7 +84,8 @@
 
   .telescope-glass {
     width: 100%;
-    height: 100%;
+    /* height: 100%; */ /* This is broken in Safari -- use aspect-ratio instead */
+    aspect-ratio: 1;
     border-radius: 50%;
     background: radial-gradient(
       circle at center,
