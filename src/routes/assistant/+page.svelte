@@ -92,5 +92,10 @@
       </div>
     </label>
     <span class="text-xs opacity-70">{question.length} / {maxLength}</span>
+    <p class="mt-4 text-sm italic opacity-80">
+      Note: This assistant is powered by AI and may occasionally generate
+      inaccurate or overly confident responses. If something seems off, please
+      double-check or reach out directly—Jon would love to clarify.
+    </p>
   </form>
 </div>

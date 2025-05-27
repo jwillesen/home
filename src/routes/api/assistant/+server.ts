@@ -38,7 +38,7 @@ export const POST: RequestHandler = async ({ request }) => {
     }
 
     const json = await response.json()
-    const answer = json.choices?.[0]?.message?.content || ""
+    const answer = json.choices?.[0]?.message?.content ?? ""
 
     return new Response(JSON.stringify({ answer }), {
       status: 200,
