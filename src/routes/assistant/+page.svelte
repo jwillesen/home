@@ -1,4 +1,6 @@
 <script lang="ts">
+  import { tick } from "svelte"
+  import { prefersReducedMotion } from "svelte/motion"
   import Spinner from "./spinner.svelte"
   import Response from "./response.svelte"
 
@@ -15,7 +17,26 @@
   let question = $state("")
   let conversation: Conversation = $state([])
 
+  async function scrollToLastQuestion() {
+    if (prefersReducedMotion.current) return
+    await tick()
+    const questions = document.querySelectorAll(".question")
+    console.log("questions", questions)
+    const lastQuestion = questions[questions.length - 1]
+    if (lastQuestion)
+      lastQuestion.scrollIntoView({ behavior: "smooth", block: "start" })
+  }
+
   async function submitQuestion(question: string) {
+    conversation.push({ role: "user", content: question })
+    conversation.push({
+      role: "assistant",
+      loading: true,
+      content: "",
+    })
+
+    await scrollToLastQuestion()
+
     const response = await fetch(`/api/assistant`, {
       method: "POST",
       headers: {
@@ -34,24 +55,24 @@
     const { answer } = await response.json()
     conversation[conversation.length - 1].loading = false
     conversation[conversation.length - 1].content = answer
+
+    await scrollToLastQuestion()
   }
 
   function handleSubmit(event: Event) {
     event.preventDefault()
     if (question.trim() === "") return
 
-    conversation.push({ role: "user", content: question })
-    conversation.push({
-      role: "assistant",
-      loading: true,
-      content: "",
-    })
     submitQuestion(question)
     question = ""
   }
 </script>
 
-<div class="flex flex-col gap-4" aria-live="polite" aria-atomic="false">
+<div
+  class="relative flex flex-col gap-4"
+  aria-live="polite"
+  aria-atomic="false"
+>
   {#each conversation as turn}
     <div
       class={["flex", turn.role === "user" ? "justify-end" : "justify-start"]}
@@ -61,26 +82,31 @@
       {:else if turn.role === "user"}
         <span
           class={[
-            "max-w-8/10 rounded-lg p-2",
+            "question max-w-8/10 rounded-lg p-2",
             turn.role === "user" ? "preset-tonal-primary" : "preset-tonal",
           ]}>{turn.content}</span
         >
       {:else}
-        <Response content={turn.content} />
+        <span class="answer preset-tonal max-w-8/10 rounded-lg p-2"
+          ><Response content={turn.content} /></span
+        >
       {/if}
     </div>
   {/each}
 
-  <form onsubmit={handleSubmit}>
+  <form
+    class="bg-surface-50-950 border-primary-500 sticky bottom-8 m-4 rounded-xl border border-1 p-4"
+    onsubmit={handleSubmit}
+  >
     <label class="label">
-      <span class="label sr-only">Ask a question</span>
+      <span class="label-text sr-only">Ask a question</span>
       <div class="input-group grid-cols-[1fr_auto]">
         <input
-          type="text"
-          bind:value={question}
           class="input"
+          type="text"
           placeholder="Type your question here..."
           maxlength={maxLength}
+          bind:value={question}
         />
         <button
           type="submit"

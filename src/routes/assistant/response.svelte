@@ -37,7 +37,7 @@
   const { content }: Props = $props()
 </script>
 
-<span class="markdown preset-tonal max-w-8/10 rounded-lg p-2">
+<span class="markdown">
   {@html marked.parse(content)}
 </span>
 
