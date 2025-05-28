@@ -73,6 +73,18 @@
   aria-live="polite"
   aria-atomic="false"
 >
+  <strong>Jon's AI Assistant, at your service</strong>
+  <p>
+    Trained on Jon's professional background and portfolio, this assistant is
+    here to answer your questions—honestly, helpfully, and with plenty of
+    context. Try asking things like:
+  </p>
+  <ul class="list-inside list-disc">
+    <li>"What is Jon's experience with React?"</li>
+    <li>"What kind of team does Jon work best with?"</li>
+    <li>"Tell me about one of Jon's indie projects."</li>
+  </ul>
+
   {#each conversation as turn}
     <div
       class={["flex", turn.role === "user" ? "justify-end" : "justify-start"]}
@@ -118,7 +130,7 @@
     </label>
     <span class="text-xs opacity-70">{question.length} / {maxLength}</span>
     <p class="mt-4 text-sm italic opacity-80">
-      Note: This assistant is powered by AI and may occasionally generate
+      Note: The Assistant is powered by AI and may occasionally generate
       inaccurate or overly confident responses. If something seems off, please
       double-check or reach out directly—Jon would love to clarify.
     </p>
