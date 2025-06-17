@@ -5,7 +5,13 @@ import { vitePreprocess } from "@sveltejs/vite-plugin-svelte"
 const config = {
   runes: true,
   preprocess: [vitePreprocess(), mdsvex()],
-  kit: { adapter: adapter() },
+  kit: {
+    adapter: adapter(),
+    alias: {
+      $src: "src",
+      $convex: "src/convex",
+    },
+  },
   extensions: [".svelte", ".svx"],
 }
 

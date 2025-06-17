@@ -1,4 +1,9 @@
 node_modules
+.env.local
+
+# Convex
+src/convex/_generated
+output.jsonl
 
 # Output
 .output
